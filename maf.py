@@ -20,7 +20,6 @@ import argparse
 import pprint
 import copy
 
-from data import fetch_dataloaders
 
 
 parser = argparse.ArgumentParser()

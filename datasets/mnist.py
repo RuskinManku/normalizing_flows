@@ -3,6 +3,9 @@ import gzip
 import pickle
 import matplotlib.pyplot as plt
 
+import sys
+sys.path.insert(1, "/content/SenOrder2/normalizing_flows/")
+print(sys.path)
 import datasets
 import datasets.util as util
 
@@ -44,7 +47,7 @@ class MNIST:
     def __init__(self, logit=True, dequantize=True):
 
         # load dataset
-        f = gzip.open(datasets.root + 'uci_mnist/mnist.pkl.gz', 'rb')
+        f = gzip.open('/content/data/mnist/mnist.pkl.gz', 'rb')
         trn, val, tst = pickle.load(f, encoding='latin1')
         f.close()
 
